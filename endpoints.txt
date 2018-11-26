@@ -1,0 +1,47 @@
+--------------------------
+CHAT API:
+--------------------------
+
+===> Post a message to the chatbot (via a request parameter "msg"):
+Send the query text as value of "msg"
+https://railq.localtunnel.me/chat_api/v1/?msg=your_query_msg_comes_here
+
+	EXAMPLES:-
+
+	Query for "trains":
+	https://railq.localtunnel.me/chat_api/v1/?msg=trains
+
+	Query for "trains from pune to bharuch on 03-12-2018":
+	https://railq.localtunnel.me/chat_api/v1/?msg=trains%20from%20pune%20to%20bharuch%20on%2003-12-2018
+	*****Ensure that spaces are replaced by %20 in the request url*****
+
+===> Get messages history of a particular user (via a request parameter "userid"):
+Send your userid as value of "userid"
+https://railq.localtunnel.me/chat_api/v1/users/?userid=your_integer_userid_here
+
+	EXAMPLES:-
+
+	Get message history of userid = 1
+	https://railq.localtunnel.me/chat_api/v1/users/?userid=1
+
+	Get message history of userid = 3
+	https://railq.localtunnel.me/chat_api/v1/users/?userid=3
+
+--------------------------
+AUTH API
+--------------------------
+
+===> Get a list of existing users
+https://railq.localtunnel.me/auth_api/v1/users/
+
+===> Sign up as a new user
+https://railq.localtunnel.me/auth_api/v1/rest-auth/registration/
+
+===> Login as an existing user
+https://railq.localtunnel.me/auth_api/v1/rest-auth/login/
+
+===> Logout a signed in user
+*****Make a POST request via the button at bottom*****
+https://railq.localtunnel.me/auth_api/v1/rest-auth/logout/
+
+DB used: sqlite
